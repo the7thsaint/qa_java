@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.List;
 
-public class Lion implements IFelines {
+public class Lion extends Animal implements IFelines {
     private IFelines felines;
     public Lion(IFelines felines){
         this.felines = felines;
@@ -31,6 +31,6 @@ public class Lion implements IFelines {
     }
 
     public List<String> getFood() throws Exception {
-        return felines.getFood("Хищник");
+        return feline.getFood("Хищник");
     }
 }
