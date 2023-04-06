@@ -24,11 +24,11 @@ public class TestCatClass {
 
     @Test
     public void testCatGetCorrectSound() {
-        assertEquals("Мяу", cat.getSound());
+        assertEquals("Котик не сказал Мяу","Мяу", cat.getSound());
     }
     @Test
     public void testCatIsPredator() throws Exception {
-        assertEquals(List.of("Животные", "Птицы", "Рыба"),cat.getFood());
+        assertEquals(List.of("Котик кушает не это", "Животные", "Птицы", "Рыба"),cat.getFood());
 
     }
 
