@@ -12,7 +12,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-
+// Класс для тестирования класса Cat
 public class TestCatClass {
     Cat cat;
 
@@ -21,14 +21,16 @@ public class TestCatClass {
         Feline feline = new Feline();
         cat = new Cat(feline);
     }
-
+//Проверка издаваемого котом звука
     @Test
     public void testCatGetCorrectSound() {
         assertEquals("Котик не сказал Мяу","Мяу", cat.getSound());
     }
+
+    //Проверка того, что котик кушает
     @Test
     public void testCatIsPredator() throws Exception {
-        assertEquals(List.of("Котик кушает не это", "Животные", "Птицы", "Рыба"),cat.getFood());
+        assertEquals("Котик кушает не это",List.of( "Животные", "Птицы", "Рыба"),cat.getFood());
 
     }
 
