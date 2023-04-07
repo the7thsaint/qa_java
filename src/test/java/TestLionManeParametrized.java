@@ -4,7 +4,7 @@ import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TestLionManeParametrized {
@@ -27,7 +27,7 @@ public class TestLionManeParametrized {
     @Test
     public void testLionWhatIsMane() throws Exception{
         Lion lion = new Lion(sex);
-        Assert.assertEquals("Пол не совпал",expectedHasMane,lion.doesHaveMane());
+        assertEquals("Пол не совпал",expectedHasMane,lion.doesHaveMane());
     }
 
 
