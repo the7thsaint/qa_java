@@ -11,7 +11,7 @@ public class TestLionMockClass {
     Lion lion;
 
     @Test
-    public void testUseedKittensTimes(){
+    public void testUsedKittensTimes(){
         lion.getKittens();
         Mockito.verify(lion,Mockito.times(1)).getKittens();
     }
