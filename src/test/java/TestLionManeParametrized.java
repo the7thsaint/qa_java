@@ -1,5 +1,3 @@
-import com.example.Feline;
-import com.example.IFelines;
 import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
