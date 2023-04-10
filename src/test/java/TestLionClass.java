@@ -12,13 +12,14 @@ public class TestLionClass {
 
    Feline feline = new Feline();
 
-
+//проверка какуж еду ест лев
    @Test
    public void testLionEatCorrectFood() throws Exception {
       Lion lion = new Lion("Самец", feline);
       assertEquals("Лев кушает не это",List.of( "Животные", "Птицы", "Рыба"),lion.getFood());
    }
 
+  //проверка неподходящего пола для льва
    @Test
    public void testLionOtherSexTrowsException(){
       String expectedAnswer = "Используйте допустимые значения пола животного - самец или самка";

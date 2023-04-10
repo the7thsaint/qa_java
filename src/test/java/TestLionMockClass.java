@@ -13,6 +13,7 @@ public class TestLionMockClass {
     @Mock
     Feline feline;
 
+    //проверка количество возвращаемых котят
     @Test
     public void testLionReturnsCorrectCountOfKittens() throws Exception {
         Lion lion = new Lion("Самец", feline);

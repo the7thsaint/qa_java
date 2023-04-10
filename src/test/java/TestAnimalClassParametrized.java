@@ -7,6 +7,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+//проверка вывода корректной еды для семейства животных
 @RunWith(Parameterized.class)
 public class TestAnimalClassParametrized {
     private final String animalKind;

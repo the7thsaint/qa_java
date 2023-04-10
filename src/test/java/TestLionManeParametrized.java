@@ -5,6 +5,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import static org.junit.Assert.assertEquals;
 
+
+//проверка наличия гривы для льва
 @RunWith(Parameterized.class)
 public class TestLionManeParametrized {
     private String sex;
