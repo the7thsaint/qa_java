@@ -1,3 +1,4 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 public class TestLionManeParametrized {
     private String sex;
     private boolean expectedHasMane;
+    Feline feline = new Feline();
 
     public TestLionManeParametrized(String sex, boolean expectedHasMane) {
         this.sex = sex;
@@ -24,7 +26,7 @@ public class TestLionManeParametrized {
 
     @Test
     public void testLionWhatIsMane() throws Exception{
-        Lion lion = new Lion(sex);
+        Lion lion = new Lion(sex, feline);
         assertEquals("Пол не совпал",expectedHasMane,lion.doesHaveMane());
     }
 

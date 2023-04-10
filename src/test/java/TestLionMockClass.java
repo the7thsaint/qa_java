@@ -1,3 +1,4 @@
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -5,15 +6,18 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static org.junit.Assert.assertEquals;
+
 @RunWith(MockitoJUnitRunner.class)
 public class TestLionMockClass {
     @Mock
-    Lion lion;
+    Feline feline;
 
     @Test
-    public void testUsedKittensTimes(){
-        lion.getKittens();
-        Mockito.verify(lion,Mockito.times(1)).getKittens();
+    public void testLionReturnsCorrectCountOfKittens() throws Exception {
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        assertEquals(1, lion.getKittens());
     }
 
 

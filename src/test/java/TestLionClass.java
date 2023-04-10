@@ -1,10 +1,7 @@
-import com.example.IFelines;
+import com.example.Feline;
 import com.example.Lion;
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
@@ -13,15 +10,20 @@ import static org.junit.Assert.assertEquals;
 
 public class TestLionClass {
 
-   Lion lion;
+   Feline feline = new Feline();
 
-   @Before
-   public void testData() throws Exception {
-      lion = new Lion("Самец");
-   }
+
    @Test
    public void testLionEatCorrectFood() throws Exception {
+      Lion lion = new Lion("Самец", feline);
       assertEquals("Лев кушает не это",List.of( "Животные", "Птицы", "Рыба"),lion.getFood());
+   }
+
+   @Test
+   public void testLionOtherSexTrowsException(){
+      String expectedAnswer = "Используйте допустимые значения пола животного - самец или самка";
+      Exception actualAnswer = Assert.assertThrows(Exception.class, () -> new Lion("Боевой вертолет апач", feline));
+      assertEquals("Ответы не совпали", expectedAnswer, actualAnswer.getMessage());
    }
 
 
