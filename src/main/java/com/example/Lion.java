@@ -16,7 +16,7 @@ public class Lion extends Animal implements IFelines {
         } else if ("Самка".equals(sex)) {
             hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка"); //not automated
         }
     }
 
