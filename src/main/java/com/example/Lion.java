@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.List;
 
-public class Lion extends Animal {
+public class Lion {
     final Feline feline;
 
     boolean hasMane;

@@ -17,7 +17,7 @@ public class TestCatClass {
     Cat cat;
 
     @Before
-    public void testData() {
+    public void createObjectsForTestClass() {
         Feline feline = new Feline();
         cat = new Cat(feline);
     }

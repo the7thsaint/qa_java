@@ -9,7 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestLionMockClass {
+public class TestLionMockClass extends BaseTest {
     @Mock
     Feline feline;
 
